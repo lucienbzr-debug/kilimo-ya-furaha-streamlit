@@ -1,0 +1,19 @@
+# Données personnelles : ne jamais versionner
+data/raw/
+data/interim/
+*.xlsx
+*.xls
+*.pkl
+
+# Environnement Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Secrets Streamlit
+.streamlit/secrets.toml
+
+# Système
+.DS_Store
+Thumbs.db
