@@ -15,6 +15,12 @@ backgroundColor = "#eef3f0"
 
 [server]
 headless = true
+# Hébergement derrière un proxy (Posit Connect Cloud) : l'application est servie dans une iframe
+# d'un autre domaine. Sans ces deux réglages, le navigateur charge la page mais la connexion
+# WebSocket (/_stcore/stream) est refusée et l'écran reste blanc. Sans risque ici : l'application
+# est en lecture seule, sans authentification ni téléversement de fichiers.
+enableCORS = false
+enableXsrfProtection = false
 
 [browser]
 gatherUsageStats = false
